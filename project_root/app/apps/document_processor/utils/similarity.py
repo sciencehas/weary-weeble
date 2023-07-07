@@ -1,4 +1,3 @@
-```python
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
@@ -22,4 +21,3 @@ def get_similarity_range(matrix, min_similarity=0.0, max_similarity=1.0):
     related_docs = find_related_documents(similarity_matrix, min_similarity)
     filtered_docs = {k: v for k, v in related_docs.items() if any(similarity_matrix[k][doc_index] <= max_similarity for doc_index in v)}
     return filtered_docs
-```
