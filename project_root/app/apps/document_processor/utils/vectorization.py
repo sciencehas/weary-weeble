@@ -1,4 +1,3 @@
-```python
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
@@ -25,4 +24,3 @@ def vectorize_documents(bags_of_words):
     word_count_vector, count_vectorizer = create_word_vector(bags_of_words)
     tfidf_matrix = create_tfidf_matrix(word_count_vector)
     return tfidf_matrix, count_vectorizer
-```
