@@ -1,4 +1,3 @@
-```python
 from django.db import models
 
 class Document(models.Model):
@@ -16,4 +15,3 @@ class DuplicateContent(models.Model):
     content = models.ForeignKey(Content, on_delete=models.CASCADE)
     duplicate_count = models.IntegerField(default=0)
     documents = models.ManyToManyField(Document)
-```
