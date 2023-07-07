@@ -1,4 +1,3 @@
-```javascript
 document.addEventListener('DOMContentLoaded', (event) => {
     const uploadButton = document.querySelector('#uploadButton');
     const fileInput = document.querySelector('#fileInput');
@@ -65,4 +64,3 @@ function highlightText(text) {
         content.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
-```
