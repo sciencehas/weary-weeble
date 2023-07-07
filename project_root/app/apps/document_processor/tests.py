@@ -1,4 +1,3 @@
-```python
 from django.test import TestCase
 from .models import Document
 from .utils import cleaning, ranking, vectorization, merging, similarity, transformer
@@ -48,4 +47,3 @@ class DocumentTestCase(TestCase):
         transformed_doc1 = transformer.ingest_document(doc1.content)
 
         self.assertIsNotNone(transformed_doc1)
-```
