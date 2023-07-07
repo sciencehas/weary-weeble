@@ -1,4 +1,3 @@
-```python
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Document
@@ -54,4 +53,3 @@ def update_document(request, document_id):
         messages.success(request, 'Document updated successfully.')
         return redirect('index')
     return render(request, 'document_processor/update.html', {'document': document})
-```
