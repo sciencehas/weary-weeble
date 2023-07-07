@@ -1,0 +1,27 @@
+```html
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Document Analysis Results</h1>
+  <div id="resultsList">
+    {% for document in documents %}
+      <div class="document">
+        <h2>{{ document.name }}</h2>
+        <p>Similarity Score: {{ document.similarity_score }}</p>
+        <p>Duplicate Content Count: {{ document.duplicate_count }}</p>
+        <div class="content">
+          {% for paragraph in document.content %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+        <button class="viewButton" data-doc-id="{{ document.id }}">View in Original Context</button>
+      </div>
+    {% endfor %}
+  </div>
+  <button id="createNewDoc">Create New Document</button>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'document_processor/js/scripts.js' %}"></script>
+{% endblock %}
+```
