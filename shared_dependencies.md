@@ -1,29 +1,19 @@
-Shared Dependencies:
+Based on the provided information, the shared dependencies between the files "C:\\weeble\\weary-weeble\\project_root\\manage.py" and "C:\\ProgramData\\miniconda3\\envs\\weeble\\lib\\threading.py" are:
 
-1. Django: Django is the main framework used in all the files for creating the web application.
+1. Python Interpreter: Both files are Python scripts and require the Python interpreter to run.
 
-2. Models: The `models.py` file defines the database schema that is used across the application.
+2. Django Framework: The manage.py file is a command-line utility that lets you interact with the Django project in various ways. It is a part of the Django framework.
 
-3. Views: The `views.py` file contains functions that handle requests and produce responses, which are used in `urls.py` and templates.
+3. Threading Module: The threading module is used in the manage.py file to run the server and in the threading.py file itself. The threading module allows for multiple operations to be performed at the same time.
 
-4. URLs: The `urls.py` file contains URL patterns that are used in Django's routing process.
+4. runserver Command: This is a Django command used in the manage.py file to start the development server.
 
-5. Templates: The HTML templates (`index.html`, `upload.html`, `results.html`) share common layout and static files (CSS, JS). They also use context variables provided by views.
+5. StatReloader: This is a Django utility used for watching for file changes.
 
-6. Static Files: The CSS and JS files are used across the HTML templates for styling and interactivity.
+6. Exception Handling: Both files use Python's built-in exception handling mechanisms.
 
-7. Utility Functions: The utility functions (`cleaning.py`, `ranking.py`, `vectorization.py`, `merging.py`, `similarity.py`, `transformer.py`) are used in views for processing the documents.
+7. Bootstrap_inner and run Functions: These are functions defined in the threading module and used in the threading.py file.
 
-8. Pretrained Model: The `stsb-mpnet-base-v2` model is used in `transformer.py` for ingesting documents.
+8. Django-main-thread: This is the name of the thread in which the Django server runs.
 
-9. manage.py: This file is used for administrative tasks and is shared across the project.
-
-10. requirements.txt: This file lists the Python dependencies required by the project.
-
-11. README.md: This file provides instructions for installation and operation, which are relevant to the entire project.
-
-12. DOM Elements: The HTML templates will have DOM elements with unique IDs that JavaScript functions can use. These might include elements like `#uploadButton`, `#fileInput`, `#resultsList`, etc.
-
-13. Message Names: These could be names of Django messages used for flash notifications, such as `file_uploaded`, `processing_complete`, etc.
-
-14. Function Names: These are names of functions defined in views and utility files, such as `upload_file`, `process_documents`, `calculate_similarity`, etc.
+Please note that there are no exported variables, data schemas, id names of DOM elements, message names, or JavaScript functions involved in these files as they are Python scripts and not related to front-end development or database schemas.
