@@ -1,29 +1,19 @@
-Shared Dependencies:
+The shared dependencies between the files are:
 
-1. Django: Django is the main framework used in all the files for creating the web application.
+1. Django: Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. All three files are part of the Django framework and share its dependencies.
 
-2. Models: The `models.py` file defines the database schema that is used across the application.
+2. autoreload module: The autoreload module is used in both "autoreload.py" and "runserver.py". It provides functions for reloading modules and checking for errors.
 
-3. Views: The `views.py` file contains functions that handle requests and produce responses, which are used in `urls.py` and templates.
+3. fn function: The function 'fn' is used in the 'autoreload.py' file. It is a wrapper function that is used to execute the function with the provided arguments.
 
-4. URLs: The `urls.py` file contains URL patterns that are used in Django's routing process.
+4. raise_last_exception function: This function is defined in 'autoreload.py' and used in 'runserver.py'. It raises the last exception that occurred.
 
-5. Templates: The HTML templates (`index.html`, `upload.html`, `results.html`) share common layout and static files (CSS, JS). They also use context variables provided by views.
+5. check_errors function: This function is defined in 'autoreload.py' and used in '__init__.py'. It checks for errors in the provided function.
 
-6. Static Files: The CSS and JS files are used across the HTML templates for styling and interactivity.
+6. execute function: This function is defined in '__init__.py'. It is used to execute the command with the provided arguments.
 
-7. Utility Functions: The utility functions (`cleaning.py`, `ranking.py`, `vectorization.py`, `merging.py`, `similarity.py`, `transformer.py`) are used in views for processing the documents.
+7. inner_run function: This function is defined in 'runserver.py'. It is used to run the server.
 
-8. Pretrained Model: The `stsb-mpnet-base-v2` model is used in `transformer.py` for ingesting documents.
+8. django.setup: This is a function call used in '__init__.py'. It sets up the Django environment.
 
-9. manage.py: This file is used for administrative tasks and is shared across the project.
-
-10. requirements.txt: This file lists the Python dependencies required by the project.
-
-11. README.md: This file provides instructions for installation and operation, which are relevant to the entire project.
-
-12. DOM Elements: The HTML templates will have DOM elements with unique IDs that JavaScript functions can use. These might include elements like `#uploadButton`, `#fileInput`, `#resultsList`, etc.
-
-13. Message Names: These could be names of Django messages used for flash notifications, such as `file_uploaded`, `processing_complete`, etc.
-
-14. Function Names: These are names of functions defined in views and utility files, such as `upload_file`, `process_documents`, `calculate_similarity`, etc.
+Please note that these are Python files and do not contain any DOM elements, message names, or data schemas.
