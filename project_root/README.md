@@ -2,7 +2,7 @@
 
 This is a Django-based web application that allows users to upload one or multiple doc/pdf files or folders (doc and docx), with a total upload limit of 1GB per project/search. The application uses the transformers pretrained model `stsb-mpnet-base-v2` to ingest documents into a database after the upload is complete.
 
-The purpose of this application is to quickly and effectively process multiple documents that have similarities. All information on each document is searched for duplicate content and then compared to the other documents uploaded. All content of all documents is represented on a categorized interactive list in order of similarity from exact to similar to unique, including any errors or unqualifiable content.
+The purpose of this application is to quickly and effectively process multiple documents that have similarities. All information on each document is searched for duplicate content and then compared to the other documents uploaded. All content of all documents is represented on a categorized interactive list in order of similarity from exact to similar to unique, including any errors or unqualifiable content. Duplicate content listed once, listingt tally and # of times and where and represened by a number & name of doc(s) where it appears. User selects any paragraph/sentence etc on the list they wish to view in original context and it will scroll automatically and appear highlighted within the merged document bundle of the uploads. When user deletes or change list entries, the uploaded document is updated and vice versa.The purpose of this application is to allow user to easily eliminate unwanted content without losing original content. User can then create new document(s) from the remaining text without being overwhelmed it is for a person with memory/cognitive issues.
 
 ## Installation
 
@@ -12,6 +12,8 @@ The purpose of this application is to quickly and effectively process multiple d
 
 ```bash
 pip install -r requirements.txt
+
+*if having any issues loading numpy v ensure you have python versions 3.7-3.8 (one from this range) and 3.9 -I had to install - I already had Python 3.10.12 Python 3.11.4 and minconda
 ```
 
 ## Usage
