@@ -1,4 +1,3 @@
-```python
 from django.db import models
 
 class Document(models.Model):
@@ -16,4 +15,3 @@ class Content(models.Model):
 class Error(models.Model):
     document = models.ForeignKey(Document, on_delete=models.CASCADE)
     error_message = models.TextField()
-```
