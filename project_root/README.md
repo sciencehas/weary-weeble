@@ -1,37 +1,62 @@
-# Document Similarity Detector
+# Django Document Similarity App
 
-This is a Django-based web application that allows users to upload one or multiple doc/pdf files or folders (doc and docx), with a total upload limit of 1GB per project/search. The application uses the transformers pretrained model `stsb-mpnet-base-v2` to ingest documents into a database after the upload is complete.
-
-The purpose of this application is to quickly and effectively process multiple documents that have similarities. All information on each document is searched for duplicate content and then compared to the other documents uploaded. All content of all documents is represented on a categorized interactive list in order of similarity from exact to similar to unique, including any errors or unqualifiable content.
+This is a Django web application that allows users to upload one or multiple Word or PDF documents, with a total size not exceeding 1GB per search. The application uses the transformers pretrained model `stsb-mpnet-base-v2` to ingest documents into a database. The purpose of this application is to process multiple documents that have similarities and present the content in an interactive list, categorized by similarity.
 
 ## Installation
 
-1. Clone the repository to your local machine.
-2. Navigate to the project root directory.
-3. Install the required dependencies using pip:
+1. Clone the repository:
+```
+git clone https://github.com/your-github-username/your-repo-name.git
+```
 
-```bash
+2. Navigate to the project directory:
+```
+cd your-repo-name
+```
+
+3. Install the required packages:
+```
 pip install -r requirements.txt
+```
+
+4. Run migrations:
+```
+python manage.py migrate
+```
+
+5. Start the server:
+```
+python manage.py runserver
 ```
 
 ## Usage
 
-1. Start the Django server:
+1. Open your web browser and navigate to `http://localhost:8000`.
 
-```bash
-python manage.py runserver
-```
+2. Upload your documents. The application will ingest the documents into the database and process them.
 
-2. Open your web browser and navigate to `localhost:8000`.
-3. Use the upload button to upload your documents.
-4. The application will process the documents and display a list of content, categorized by similarity.
-5. Select any paragraph/sentence on the list to view it in its original context within the merged document bundle of the uploads.
-6. You can delete or change list entries, and the uploaded document will be updated accordingly.
+3. The content of all documents will be represented in a categorized interactive list, in order of similarity.
 
-## Contributing
+4. Select any text on the list to view it in its original context within the merged document bundle of the uploads.
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+5. You can delete or change list entries. The uploaded document will be updated accordingly.
 
-## License
+6. You can create new documents from the remaining text.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Note
+
+The application is designed for individuals with memory or cognitive issues, to help them easily eliminate unwanted content without losing the original content.
+
+The code for the algorithms used in this application can be found at https://github.com/guenter-r/knn.git. The `reuters` code in this repository is replaced with the database of the ingested documents supplied by the user.
+
+The application processes the uploaded documents as follows:
+
+1. Cleaning data with Regex and NLTK
+2. Creating bags of words
+3. Ranking and sorting data from dictionaries
+4. Creating word to vector instances
+5. Merging data into a matrix
+6. Identifying related text elements
+7. Calculating similarity
+
+All top words are gathered together in a single words vector. Vectors are created for every bag and then all vectors are stacked together to a single matrix. The application uses a simple iteration to find all related documents that are at least x% similar, where x is defined arbitrarily.
