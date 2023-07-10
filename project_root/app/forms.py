@@ -1,4 +1,3 @@
-```python
 from django import forms
 
 class UploadFileForm(forms.Form):
@@ -6,4 +5,3 @@ class UploadFileForm(forms.Form):
 
 class EditContentForm(forms.Form):
     content = forms.CharField(widget=forms.Textarea, label='Content')
-```
