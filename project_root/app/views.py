@@ -1,4 +1,3 @@
-```python
 from django.shortcuts import render, redirect
 from .forms import UploadFileForm
 from .models import Document
@@ -59,4 +58,3 @@ def create_new(request):
     # Create new document from remaining text
     new_document = create_new_document(documents)
     return redirect('view', doc_id=new_document.id)
-```
