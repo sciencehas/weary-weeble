@@ -1,4 +1,3 @@
-```python
 from django.core.files.storage import default_storage
 from .models import Document
 from .utils import transformers, cleaning, vectorization, similarity
@@ -31,5 +30,3 @@ def create_document(file):
         similarity_scores=similarity_scores,
     )
 
-    return document
-```
