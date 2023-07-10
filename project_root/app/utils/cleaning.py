@@ -1,4 +1,3 @@
-```python
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -33,4 +32,3 @@ def remove_stopwords(text):
     word_tokens = word_tokenize(text)
     filtered_text = [word for word in word_tokens if word not in stop_words]
     return ' '.join(filtered_text)
-```
