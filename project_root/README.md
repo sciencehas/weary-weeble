@@ -1,6 +1,8 @@
 # Django Document Similarity App
 
-This is a Django web application that allows users to upload one or multiple Word or PDF documents, with a total size not exceeding 1GB per search. The application uses the transformers pretrained model `stsb-mpnet-base-v2` to ingest documents into a database. The purpose of this application is to process multiple documents that have similarities and present the content in an interactive list, categorized by similarity.
+This is a Django web application that allows users to upload one or multiple Word or PDF documents, with a total size not exceeding 1GB per search. The application uses the transformers pretrained model `stsb-mpnet-base-v2` to ingest documents into a database. The purpose of this application is to quickly and effectively process multiple documents that have similarities. All information on each document is searched for duplicate content and then compared to the other documents uploaded. All content of all documents is represented on a categorized interactive list in order of similarity from exact to similar to unique, including any errors or unqualifiable content. Duplicate content listed once # of times represened by a number & name of doc(s) where it appears. User selects any paragraph/sentence etc on the list they wish to view in original context and it will scroll automatically and appear highlighted within the merged document bundle of the uploads. When user deletes or change list entries, the uploaded document is updated and vice versa.
+
+The goal of this application is to allow user to easily eliminate unwanted content without losing original content. User can then create new document(s) from the remaining text without being overwhelmed it is for a person with memory/cognitive issues
 
 ## Installation
 
