@@ -1,4 +1,3 @@
-```python
 from sklearn.metrics.pairwise import cosine_similarity
 from .vectorization import vectorize
 import numpy as np
@@ -24,4 +23,3 @@ def get_similarity_score(document1, document2):
     vector2 = vectorize(document2)
     similarity_score = cosine_similarity(vector1.reshape(1, -1), vector2.reshape(1, -1))
     return similarity_score[0][0]
-```
