@@ -1,4 +1,3 @@
-```python
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from .cleaning import clean_data
@@ -53,4 +52,3 @@ def vectorize_documents(docs):
     tfidf_matrix = create_tfidf_matrix(cleaned_docs, vectorizer, tfidf_transformer)
 
     return tfidf_matrix
-```
