@@ -1,4 +1,4 @@
-```python
+
 from sentence_transformers import SentenceTransformer
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -22,4 +22,3 @@ def ingest_documents(file):
         doc.save()
 
     return True
-```
