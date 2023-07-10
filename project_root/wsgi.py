@@ -1,4 +1,3 @@
-```python
 """
 WSGI config for project_root project.
 
@@ -15,4 +14,3 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_root.settings')
 
 application = get_wsgi_application()
-```
