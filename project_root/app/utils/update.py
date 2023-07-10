@@ -1,4 +1,3 @@
-```python
 from django.db import transaction
 from .models import Document, Content
 
@@ -22,4 +21,3 @@ def add_content(document_id, text):
         new_content = Content.objects.create(document=document, text=text)
         document.content += "\n" + new_content.text
         document.save()
-```
