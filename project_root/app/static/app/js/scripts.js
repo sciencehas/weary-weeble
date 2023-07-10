@@ -1,4 +1,3 @@
-```javascript
 document.addEventListener('DOMContentLoaded', (event) => {
     const uploadForm = document.getElementById('upload-form');
     const fileInput = document.getElementById('file-input');
@@ -89,4 +88,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
-```
